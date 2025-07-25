@@ -12,8 +12,8 @@ const Bookshelf = () => {
     // function handleInputChange
     // Using (event) because every time the user will type in the form, this will be registered as an event for my function.
     const handleInputChange = (event) => {
-        const name = event.target.name; //name in the form input box (e.g. the 'title' or 'author' part)
-        const value = event.target.value; //what the user typed in
+        const name = event.target.name; //name in the form input box (e.g. the 'title' or 'author' part) -- The event is accessing the name of the input field.
+        const value = event.target.value; //what the user typed in - This is accessing the value the user has typed.
 
         const updatedBook = {
             title: newBook.title,
