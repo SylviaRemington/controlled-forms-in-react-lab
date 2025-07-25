@@ -9,6 +9,8 @@ const Bookshelf = () => {
         </div>
 
         <div className="bookCardsDiv">{/* Book cards will display here */}</div>
-        
+
     </div>
 };
+
+export default Bookshelf;
