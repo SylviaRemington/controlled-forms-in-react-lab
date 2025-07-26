@@ -113,8 +113,8 @@ const Bookshelf = () => {
                 </div>
 
                 {/* Test Button to see if my handleInputChange function is working before i create controlled forms. */}
-                <button onClick={() => handleInputChange({ target: { name: "title", value: "value" } })}>
-                    Test handleInputChange</button>
+                {/* <button onClick={() => handleInputChange({ target: { name: "title", value: "value" } })}>
+                    Test handleInputChange</button> */}
 
             </div>
         </>
