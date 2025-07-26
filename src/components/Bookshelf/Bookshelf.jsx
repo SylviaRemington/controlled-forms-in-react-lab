@@ -26,6 +26,7 @@ const Bookshelf = () => {
             [name]: value //updating one field at a time - “Look at what’s inside the variable called name, and use that as the field (key) name. Then store value as the value for that field.”
         };
 
+        // ! I think this below line 30 is doing the same thing as name & value above? Not sure if I need this too.
         updatedBook[name] = value; //this updates the one field the user typed in
 
         setNewBook(updatedBook); //new state - this setter is saving newBook to a new state as an updatedBook.
