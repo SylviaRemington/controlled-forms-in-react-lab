@@ -107,8 +107,8 @@ const Bookshelf = () => {
                     {/* Book cards will display here */}
                     {books.map((book, index) => (
                         <div key={index} className="bookCard">
-                            <p><strong>Title:</strong> {book.title}</p>
-                            <p><strong>Author:</strong> {book.author}</p>
+                            <p>Title: {book.title}</p>
+                            <p>Author: {book.author}</p>
                         </div>
                     ))}
                 </div>
