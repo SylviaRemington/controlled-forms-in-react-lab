@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 const Bookshelf = () => {
-    const [books, setbooks] = useState([
+    const [books, setBooks] = useState([
         { title: 'Fourth Wing', author: 'Rebecca Yarros' },
         { title: 'The Lion, the Witch and the Wardrobe', author: 'C.S. Lewis' },
         { title: 'Automate the Boring Stuff With Python', author: 'Al Sweigart' },
@@ -55,7 +55,7 @@ const Bookshelf = () => {
         event.preventDefault(); // Prevents the default form submission actions - which means it is preventing the page reloading
 
         // Add newBook to the books array - updating the books array state with a new list to include the newBook
-        setbooks([...books, newBook]);
+        setBooks([...books, newBook]);
 
         // Clear the input fields - resetting the newBook state to its initial empty values to clear the form fields so that user can add addtl
         setNewBook({ title: '', author: '' });
