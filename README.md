@@ -1,6 +1,6 @@
 # Controlled Forms in React Lab
 
-![MyBookshelf] (./public/MyBookshelf.png)
+![MyBookshelf](./public/MyBookshelf.png)
 
 ## Introduction
 
