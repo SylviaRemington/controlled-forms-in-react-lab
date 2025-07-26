@@ -87,8 +87,10 @@ input {
 
 .bookCardsDiv {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: row; */
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
   width: 90%;
   margin-top: 20px;
 }

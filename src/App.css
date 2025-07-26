@@ -18,6 +18,22 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+.formDiv {
+  border: 2px solid #000;
+  padding: 16px;
+}
+
+button {
+  background-color: rgb(170, 53, 228);
+  color: white;
+}
+
+.bookCardsDiv {
+  display: flex;
+
+  flex-wrap: wrap;
+}
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
