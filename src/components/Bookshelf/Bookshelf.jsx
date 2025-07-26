@@ -8,7 +8,6 @@ const Bookshelf = () => {
     ]);
     const [newBook, setNewBook] = useState({ title: '', author: '' });
 
-
     // ----------------------------------------------------------------------------------
     // function handleInputChange
     // Using (event) because every time the user will type in the form, this will be registered as an event for my function.
@@ -63,7 +62,6 @@ const Bookshelf = () => {
         // testing to make sure working
         console.log("Book added:", newBook);
         console.log("Updated books list:", [...books, newBook]);
-
     };
 
     // ----------------------------------------------------------------------------------
@@ -75,8 +73,8 @@ const Bookshelf = () => {
 
                 <div className="formDiv">
                     <h3>Add a Book</h3>
+
                     {/* FORM CREATION */}
-                    {/* Form will go here */}
                     <form onSubmit={handleSubmit}>
                         <label>
                             Title:
@@ -122,3 +120,5 @@ const Bookshelf = () => {
 };
 
 export default Bookshelf;
+
+
