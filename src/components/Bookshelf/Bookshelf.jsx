@@ -63,6 +63,7 @@ const Bookshelf = () => {
         </div>
 
         <div className="bookCardsDiv">{/* Book cards will display here */}</div>
+        
         <button onClick={() => handleInputChange({ target: { name: "title", value: "value" } })}>
             Test handleInputChange</button>
 
