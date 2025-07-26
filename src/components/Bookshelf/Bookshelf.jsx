@@ -1,3 +1,6 @@
+// Majority of this lesson on Controlled Forms is done in this component Bookshelf.
+// Changed a little bit of code in App.jsx for css styling purposes so better alignment and continuity on webpage.
+
 import { useState } from 'react';
 
 const Bookshelf = () => {
@@ -120,5 +123,4 @@ const Bookshelf = () => {
 };
 
 export default Bookshelf;
-
 
