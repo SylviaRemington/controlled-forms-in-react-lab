@@ -15,11 +15,11 @@
 - By the end of this lab, you’ll have a functional application where users can add books to a personalized bookshelf, with each new entry updating the display immediately—no page reloads required!
 
 ## Lab exercises
-1. Create your component - Create a new component called Bookshelf
-2. Define the initial state
-3. Create event handlers - handleInputChange & handleSubmit
-4. Form creation
-5. Map through your books
+1. Create your component - Create a new component called Bookshelf.
+2. Define the initial state.
+3. Create event handlers - handleInputChange & handleSubmit.
+4. Form creation.
+5. Map through your books.
 
 # React + Vite
 
