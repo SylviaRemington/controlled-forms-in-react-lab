@@ -69,21 +69,56 @@ const Bookshelf = () => {
     // ----------------------------------------------------------------------------------
 
 
-    return <div className="bookshelfDiv">
+    return (
+        <>
+            <div className="bookshelfDiv">
 
-        <div className="formDiv">
-            <h3>Add a Book</h3>
-            {/* FORM CREATION */}
-            {/* Form will go here */}
-        </div>
+                <div className="formDiv">
+                    <h3>Add a Book</h3>
+                    {/* FORM CREATION */}
+                    {/* Form will go here */}
+                    <form onSubmit={handleSubmit}>
+                        <label>
+                            Title:
+                            <input
+                                type="text"
+                                name="title"
+                                value={newBook.title}
+                                onChange={handleInputChange}
+                            />
+                        </label>
+                        <br />
+                        <label>
+                            Author:
+                            <input
+                                type="text"
+                                name="author"
+                                value={newBook.author}
+                                onChange={handleInputChange}
+                            />
+                        </label>
+                        <br />
+                        <button type="submit">Add Book</button>
+                    </form>
+                </div>
 
-        <div className="bookCardsDiv">{/* Book cards will display here */}</div>
+                <div className="bookCardsDiv">
+                    {/* Book cards will display here */}
+                    {books.map((book, index) => (
+                        <div key={index} className="bookCard">
+                            <p><strong>Title:</strong> {book.title}</p>
+                            <p><strong>Author:</strong> {book.author}</p>
+                        </div>
+                    ))}
+                </div>
 
-        {/* Test Button to see if my handleInputChange function is working before i create controlled forms. */}
-        <button onClick={() => handleInputChange({ target: { name: "title", value: "value" } })}>
-            Test handleInputChange</button>
+                {/* Test Button to see if my handleInputChange function is working before i create controlled forms. */}
+                <button onClick={() => handleInputChange({ target: { name: "title", value: "value" } })}>
+                    Test handleInputChange</button>
 
-    </div>
+            </div>
+        </>
+    )
 };
 
 export default Bookshelf;
