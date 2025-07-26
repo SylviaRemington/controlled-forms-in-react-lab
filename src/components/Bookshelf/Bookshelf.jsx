@@ -9,6 +9,7 @@ const Bookshelf = () => {
     const [newBook, setNewBook] = useState({ title: '', author: '' });
 
 
+    // ----------------------------------------------------------------------------------
     // function handleInputChange
     // Using (event) because every time the user will type in the form, this will be registered as an event for my function.
     const handleInputChange = (event) => {
@@ -47,11 +48,25 @@ const Bookshelf = () => {
     //     setNewBook({ ...newBook, [name]:value});
     // };
 
+    // ----------------------------------------------------------------------------------
 
-    // function handleSubmit
-    // const handleSubmit = (event) => {
+    // function handleSubmit - creating a function that will execute when the form is submitted
+    const handleSubmit = (event) => {
+        event.preventDefault(); // Prevents the default form submission actions - which means it is preventing the page reloading
 
-    // }
+        // Add newBook to the books array - updating the books array state with a new list to include the newBook
+        setbooks([...books, newBook]);
+
+        // Clear the input fields - resetting the newBook state to its initial empty values to clear the form fields so that user can add addtl
+        setNewBook({ title: '', author: '' });
+
+        // testing to make sure working
+        console.log("Book added:", newBook);
+        console.log("Updated books list:", [...books, newBook]);
+
+    };
+
+    // ----------------------------------------------------------------------------------
 
 
     return <div className="bookshelfDiv">
