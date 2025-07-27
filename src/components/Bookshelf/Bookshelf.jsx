@@ -30,7 +30,7 @@ const Bookshelf = () => {
 
         console.log("updatedBook AFTER spread + update:", updatedBook);
 
-        // ! I think this below line 34 is doing the same thing as name & value above? Not sure if I need this too. I'm thinking maybe not. That it's just repeating what I just did?
+        // I think this below line 34 is doing the same thing as name & value above. Not sure if I need this too. I'm thinking probably not since dev tools working. Pretty sure the code I have below is just repeating what I just did above.
         // updatedBook[name] = value; //this updates the one field the user typed in
         // console.log("updatedBook to see if it's the same as updatedBook AFTER", updatedBook);
 
