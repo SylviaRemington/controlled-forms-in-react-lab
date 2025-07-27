@@ -1,4 +1,4 @@
-// Majority of this lesson on Controlled Forms is done in this component Bookshelf.
+// The majority of this lesson on 'Controlled Forms' is done in this component Bookshelf.
 // Changed a little bit of code in App.jsx for css styling purposes so better alignment and continuity on webpage.
 
 import { useState } from 'react';
@@ -22,47 +22,35 @@ const Bookshelf = () => {
 
         console.log("newBook BEFORE change:", newBook);
 
-        // const updatedBook = {
-        //     title: newBook.title,
-        //     author: newBook.author,
-        // };
-
         //changing updatedBook code above to using spread operator as per the lesson.
         const updatedBook = {
             ...newBook, //creating a new object updatedBook with spread operator
-            [name]: value //updating one field at a time - “Look at what’s inside the variable called name, and use that as the field (key) name. Then store value as the value for that field.”
+            [name]: value //updating one field at a time - e.g. looking at what’s inside the variable called name, and use that as the field/key name; and then storing the value as the value for that field.
         };
 
         console.log("updatedBook AFTER spread + update:", updatedBook);
 
-        // ! I think this below line 30 is doing the same thing as name & value above? Not sure if I need this too.
-        updatedBook[name] = value; //this updates the one field the user typed in
-        console.log("updatedBook to see if it's the same as updatedBook AFTER", updatedBook);
+        // ! I think this below line 34 is doing the same thing as name & value above? Not sure if I need this too. I'm thinking maybe not. That it's just repeating what I just did?
+        // updatedBook[name] = value; //this updates the one field the user typed in
+        // console.log("updatedBook to see if it's the same as updatedBook AFTER", updatedBook);
 
         setNewBook(updatedBook); //new state - this setter is saving newBook to a new state as an updatedBook.
         console.log("Checking new state to see if working:", updatedBook);
     };
 
-    // A More Advanced Version of handleInputChange below:
-    //Looked up a more advanced way to do it & found the following. Don't understand all of this yet. But note to self to research and understand further:
-    // const handleInputChange = (event) => {
-    //     const {name, value} = event.target;
-    //     setNewBook({ ...newBook, [name]:value});
-    // };
-
     // ----------------------------------------------------------------------------------
 
-    // function handleSubmit - creating a function that will execute when the form is submitted
+    // function handleSubmit - Creating a function that will execute when the form is submitted.
     const handleSubmit = (event) => {
-        event.preventDefault(); // Prevents the default form submission actions - which means it is preventing the page reloading
+        event.preventDefault(); // Preventing the default form submission actions - which prevents the page from reloading.
 
-        // Add newBook to the books array - updating the books array state with a new list to include the newBook
+        // Adding newBook to the books array - updating the books array state with a new list to include the newBook
         setBooks([...books, newBook]);
 
-        // Clear the input fields - resetting the newBook state to its initial empty values to clear the form fields so that user can add addtl
+        // Clearing the input fields - resetting the newBook state to its initial empty values to clear the form fields so that user can add addtl.
         setNewBook({ title: '', author: '' });
 
-        // testing to make sure working
+        // Testing to make sure working.
         console.log("Book added:", newBook);
         console.log("Updated books list:", [...books, newBook]);
     };
@@ -123,4 +111,6 @@ const Bookshelf = () => {
 };
 
 export default Bookshelf;
+
+
 
